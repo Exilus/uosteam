@@ -1,0 +1,9 @@
+// Author: Gramoz
+// Purpose: Honor the closest mob and attack it
+//
+@getenemy 'murderer' 'enemy' 'criminal' 'gray' 'closest'
+if @findobject 'enemy'
+  autotargetobject 'enemy'
+  virtue 'Honor'
+  attack 'enemy'
+endif

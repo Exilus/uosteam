@@ -1,0 +1,39 @@
+if not listexists 'Weave'
+  createlist 'Weave'
+endif
+if list 'Weave' == '0'
+  @pushlist 'Weave' '0x1062'
+  @pushlist 'Weave' '0x1066'
+  @pushlist 'Weave' '0x1060'
+  @pushlist 'Weave' '0x1064'
+  //@pushlist 'Weave' 'graphic'
+endif
+if not @findobject 'loom' or @distance 'loom' > 3
+  for 0 to 'Weave'
+    if @findtype 'Weave[]' 'any' 'ground' '1' '2'
+      sysmsg 'loom found' '54'
+      setalias 'loom' 'found'
+      break
+    endif
+  endfor
+endif
+if weight > 525
+  msg 'UNLOAD YOUR BAGS!!!'
+  stop
+elseif @usetype 0xe1f any backpack
+  waitfortarget 2000
+  target! found
+  pause 1500
+elseif @usetype 0xe1d any backpack
+  waitfortarget 2000
+  target! found
+  pause 1000
+elseif @usetype 0xe1e any backpack
+  waitfortarget 2000
+  target! found
+  pause 1000
+elseif @usetype 0xfa0 any backpack
+  waitfortarget 2000
+  target! found
+  pause 1000
+endif

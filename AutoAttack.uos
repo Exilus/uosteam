@@ -1,0 +1,5 @@
+@getenemy 'murderer' 'enemy' 'criminal' 'gray' 'closest'
+if @findobject 'enemy'
+  autotargetobject 'enemy'
+  attack 'enemy'
+endif

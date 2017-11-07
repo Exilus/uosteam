@@ -2,4 +2,7 @@
 if @findobject 'enemy'
   autotargetobject 'enemy'
   attack 'enemy'
+  pause 1500
+  @clearusequeue
+  @cleartargetqueue
 endif

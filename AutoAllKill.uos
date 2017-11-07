@@ -1,0 +1,7 @@
+@getenemy 'murderer' 'enemy' 'criminal' 'gray' 'closest'
+if @findobject 'enemy'
+  autotargetobject 'enemy'
+  msg 'all kill'
+  pause 5000
+  @cleartargetqueue
+endif
